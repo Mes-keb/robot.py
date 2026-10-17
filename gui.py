@@ -21,4 +21,26 @@ class RobotGUI:
 
         self.build_interface()
         self.draw_grid()
-        
+
+    def buil_interface(self):
+        title = ttk.Label(
+            self.root,
+            text="RoboMove Simulator",
+            font=("Arial", 20, "bold")
+        ) 
+        title.pack(pady=10)
+
+        self.canvas = tk.Canvas(
+            self.root,
+            width=self.cell_size * 9,
+            height=self.cell_size * 9,
+            bg="white",
+            highlightthickness=1,
+            highlightthickness="#a0bfe5eb"
+        )   
+        self.canvas.pack(padx=10, pady=5)
+
+        controls = ttk.Frame(self.root)
+        controls.pack(pady=10)
+
+        ttk.Button
